@@ -1,0 +1,16 @@
+version: '1'
+
+services:
+  gic-dx-companyhousing:
+    build:
+      context: .
+      dockerfile: .docker/Dockerfile
+    container_name: gic-dx-companyhousing
+    ports:
+      - 8000:80
+    volumes:
+      - .:/var/www/gic-dx-companyhousing
+      - ./.conf/apache/httpd.conf:/etc/apache2/httpd.conf
+      - ./.conf/apache/conf.d/server.conf:/etc/apache2/conf.d/server.conf
+      - ./.conf/php/8.1/php-fpm.d/www.conf:/usr/local/etc/php-fpm.d/zzz-www.conf
+      - ./.conf/php/8.1/php.ini:/usr/local/etc/php/conf.d/my-app.ini
