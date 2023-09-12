@@ -1,22 +1,29 @@
 import React from "react";
-import { Center, Text, Box } from "@chakra-ui/react";
+import { Box, HStack, Img, Text } from "@chakra-ui/react";
+import userIconPng from '../../../../../public/images/user.png'
+import logoPng from '../../../../../public/images/logo.png'
+
+import './Header.scss'
 
 function Header() {
     return (
-        <Center bg="#e3f2fd">
-            <Box
-                bottom="0"
-                left="0"
-                width="100%"
-                backgroundColor="#e3f2fd"
-                display="flex"
-                justifyContent="center"
-                alignItems="center"
-                padding="10px 0"
-            >
-                <Text>Header</Text>
-            </Box>
-        </Center>
+        <Box className="common-header">
+            {/* system logo & name */}
+            <HStack className="system" spacing={10}>
+                <Img src={logoPng} className="system-logo" />
+                <Text className="system-name">
+                    社宅管理
+                </Text>
+            </HStack>
+
+            {/* logined user */}
+            <HStack className="login" spacing={10}>
+                <Img src={userIconPng} className="login-user" />
+                <Text className="login-name">
+                    田中さん
+                </Text>
+            </HStack>
+        </Box>
     );
 }
 

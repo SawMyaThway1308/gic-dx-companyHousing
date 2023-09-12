@@ -1,0 +1,20 @@
+.system-body {
+    position: absolute;
+    z-index: 0;
+    background: #FFF;
+
+    .body-title {
+        color: #000;
+        font-family: 'Noto Serif JP';
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 32px;
+        letter-spacing: 0.006em;
+        text-align: center;
+        width: 167px;
+        height: 65px;
+        top: 26px;
+        left: 84px;
+        position: absolute;
+    }
+}

@@ -5,6 +5,10 @@ const CommonStrings = {
         setting: "設定",
         employeeMange: "社員管理"
     },
+
+   equipment: {
+        required: '必須',
+    }
 };
 
 export default CommonStrings;

@@ -1,38 +1,30 @@
 import React from 'react'
 import {
-  Flex, Grid, GridItem, Spacer
+  Grid, GridItem
 } from '@chakra-ui/react'
-// import Body from './Body'
-// import Footer from './Footer'
-// import Navigation from './Navigation'
-// import './Main.scss'
-// import Footer from '../pages/Footer'
-// import NavBar from '../pages/NavBar'
+import Body from '../pages/Body'
 import Header from '../pages/Header'
 
 function Main() {
-  const [isNavCollapsed, setIsNavCollapsed] = React.useState(false)
-
   return (
     <Grid
-      height="fit-content"
-      templateAreas={`"nav main"
-                  "nav main"`}
-      gridTemplateRows="28px 1fr"
-      gridTemplateColumns={isNavCollapsed ? '50px 1fr' : '208px 1fr'}
+      templateAreas={`"header header""nav main"`}
+      gridTemplateRows={'64px 1fr 0px'}
+      gridTemplateColumns={'240px 1fr'}
+      h='900px'
+      w='1440px'
+      gap='0'
+      mx="12"
     >
-      <GridItem area="nav">
-        {/* <NavBar /> */}
-        {/* <Header /> */}
-        {/* <Navigation isNavCollapsed={isNavCollapsed} setIsNavCollapsed={setIsNavCollapsed} /> */}
+      <GridItem colSpan={2} bg='orange.300' area={'header'}>
+        <Header />
       </GridItem>
-      <GridItem area="main" className="main">
-        <Flex direction="column">
-            
-          {/* <Body isNavCollapsed={isNavCollapsed} /> */}
-          <Spacer />
-          <Header />
-        </Flex>
+      <GridItem rowSpan={2} bg='pink.300' area={'nav'}>
+        {/* fix position */}
+        Nav
+      </GridItem>
+      <GridItem rowSpan={2} area={'main'}>
+        <Body />
       </GridItem>
     </Grid>
   )
