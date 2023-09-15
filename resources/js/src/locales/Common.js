@@ -3,7 +3,9 @@ const CommonStrings = {
         title: "GIC-DX-CompanyHousing",
         home: "ホーム",
         setting: "設定",
-        employeeMange: "社員管理"
+        employeeMange: "社員管理",
+        
+        required: '必須',
     },
 };
 
