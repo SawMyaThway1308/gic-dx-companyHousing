@@ -7,6 +7,9 @@ import Footer from "../pages/Footer";
 import {Employee, EmployeeCreate} from "../pages/Employee";
 import {Setting, SettingCreate} from "../pages/Setting";
 import Main from "../main";
+import DormitoryEquipmentRegistration from "../pages/DormitoryEquipment/DormitoryEquipmentRegistration";
+import DormitoryEquipmentEditing from "../pages/DormitoryEquipment/DormitoryEquipmentEditing";
+import DormitoryEquipmentDetails from "../pages/DormitoryEquipment/DormitoryEquipmentDetails/DormitoryEquipmentDetails";
 
 function AppRouter() {
     return (
@@ -14,6 +17,9 @@ function AppRouter() {
           <Routes>
             <Route path="/" element={<Main />}>
             </Route>
+            <Route path="/equipment-registration" element={<DormitoryEquipmentRegistration />} />
+            <Route path="/equipment-edition" element={<DormitoryEquipmentEditing />} />
+            <Route path="/equipment-details" element={<DormitoryEquipmentDetails />} />
           </Routes>
         </Router>
     )

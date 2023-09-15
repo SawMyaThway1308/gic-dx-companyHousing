@@ -1,0 +1,246 @@
+$color: #000000;
+
+@mixin register-title-style($color: $color, $font-size: 22px, $font-weight: 400, $line-height: normal, $letter-spacing: 0.132px) {
+    color: $color;
+    font-family: 'Noto Serif JP';
+    font-size: $font-size;
+    font-style: normal;
+    font-weight: $font-weight;
+    letter-spacing:$letter-spacing;
+    line-height: $line-height;
+    text-align: center;
+}
+
+@mixin register-align($height: 67px, $left: 84px, $top: 12px, $width: 1032px) {
+    height: $height;
+    left: $left;
+    position: absolute;
+    top: $top;
+    width: $width;
+}
+
+@mixin csv-style($left: 0px) {
+    @include register-align($height: 40px, $left: $left, $top: 0px, $width: 124px);
+    @include register-title-style($color: #FFF, $font-size: 16px, $font-weight: 400, $line-height: normal, $letter-spacing: 0.006em);
+    background: #367DA5;
+    border-radius: 6px;
+}
+
+.equipment-list {
+    background: #FFF;
+    position: absolute;
+    z-index: 0;
+
+    &-title {
+        @include register-align();
+        @include register-title-style($font-weight: 700, $line-height: 32px, $letter-spacing: 0.006em);
+        border-radius: 4px;
+        background: #FFF;
+        box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+
+        &-list {
+            width: 89px;
+            height: 32px;
+            top: 16px;
+            left: 28px;
+            position: absolute;
+            color: #000;
+            text-align: center;
+            font-family: 'Noto Serif JP';
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            letter-spacing: 0.132px;
+        }
+
+        &-new {
+            width: 89px;
+            height: 32px;
+            left: 180px;
+            top: 16px;
+            position: absolute;
+            color: #000;
+            text-align: center;
+            font-family: 'Noto Serif JP';
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            letter-spacing: 0.132px;
+        }
+
+        &-scroll {
+            background: #367DA5;
+            width: 150px;
+            height: 3px;
+            top: 67px;
+            left: 0px;
+            position: absolute;
+        }
+    }
+
+    &-data {
+        @include register-align($height: 656px, $left: 84px, $top: 107px, $width: 1032px);
+
+        &-action {
+            top: 3px;
+            position: absolute;
+
+            .csv {
+                &-input {
+                    @include csv-style();
+                    &-attachment {
+                        width: 16px;
+                        height: 16.965px;
+                        left: 14px;
+                        position: absolute;
+                    }
+
+                    &-name {
+                        color: #FFF;
+                        text-align: center;
+                        font-family: 'Noto Serif JP';
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                        text-align: center;
+                        left: 40px;
+                        top: 10px;
+                        position: absolute;
+                    }
+                }
+
+                &-output {
+                   @include csv-style($left: 139px);
+                   &-download {
+                        width: 16px;
+                        height: 21.333px;
+                        left: 14px;
+                        position: absolute;
+                   }
+
+                   &-name {
+                    color: #FFF;
+                    text-align: center;
+                    font-family: 'Noto Serif JP';
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    text-align: center;
+                    left: 40px;
+                    top: 10px;
+                    position: absolute;
+                }
+                }
+            }
+
+            .delete-data {
+                width: 100px;
+                height: 40px;
+                padding: 8px 16px;
+                border-radius: 6px;
+                border: 1px solid #367DA5;
+                background: #FFF;
+                left: 309px;
+                position: absolute;
+            }
+
+            .search-group {
+                left: 622px;
+                position: absolute;
+                width: 410px;
+                height: 40px;
+
+                &-data {
+                   width: 300px;
+                   height: 40px;
+                   left: 0px;
+                   top: 0px;
+                   position: absolute;
+                   background: #EEE;
+                }
+
+                &-action {
+                    width: 90px;
+                    height: 40px;
+                    left: 320px;
+                    position: absolute;
+                    border-radius: 6px;
+                    background: #367DA5;
+                    color: #FFF;
+                    text-align: right;
+                    font-family: 'Noto Serif JP';
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+
+                    &-icon {
+                        width: 16px;
+                        height: 16.965px;
+                        left: 14px;
+                        position: absolute;
+                    }
+
+                    &-name {
+                        color: #FFF;
+                        text-align: center;
+                        font-family: 'Noto Serif JP';
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                        text-align: center;
+                        left: 40px;
+                        top: 8px;
+                        position: absolute;
+                    }
+                }
+            }
+        }
+
+        &-table {
+            @include register-align($height: 553px, $left: 0px, $top: 71px, $width: 1032px);
+
+            .data-table-header {
+                @include register-align($height: 52px, $left: 0px, $top: 0px, $width: 1032px);
+                background: #EEE;
+                padding: 10px;
+            }
+            .table {
+                &-number {
+                    // left: 0px;
+                    // display: flex;
+                    width: 63px;
+                    height: 52px;
+                    padding: 10px;
+                    position: absolute;
+                    // color: #000;
+                    // font-family: 'Noto Serif JP';
+                    // font-size: 20px;
+                    // font-style: normal;
+                    // font-weight: 400;
+                    // line-height: normal;
+                }
+
+                &-check {
+                    // display: flex;
+                    // width: 50.079px;
+                    // height: 52px;
+                    // left: 63px;
+                    // top: 0px;
+                    // position: absolute;
+                    // padding: 15px;
+                    // align-items: center;
+                    width: 18px;
+                    height: 20px;
+                // background: #FFF;
+                }
+            }
+        }
+    }
+}
+

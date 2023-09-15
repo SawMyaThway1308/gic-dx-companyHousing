@@ -1,4 +1,4 @@
-$background: #f5f5f7;
+$background: rgba(54, 125, 165, 0.15);
 $color: #000000;
 
 @mixin header-font($color: $color, $font-size: 24px, $font-weight: 600, $line-height: 22px, $text-align: center) {
@@ -25,7 +25,7 @@ $color: #000000;
 
 .common-header {
     @include header-img($height: 64px, $width: 1440px);
-    background: $background;
+   background: #F5F5F7;
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
     flex-shrink: 0;
     position: fixed;
@@ -33,7 +33,6 @@ $color: #000000;
 
     .system {
         @include header-align();
-
         &-logo {
             @include header-img();
         }
@@ -52,8 +51,8 @@ $color: #000000;
         }
 
         &-name {
-            @include header-font($font-size: 16px, $font-weight: 700, $line-height: 22px);
             @include header-align(24px, 64px, 48px, 10px);
+            @include header-font($font-size: 16px, $font-weight: 700, $line-height: 22px);
         }
     }
 }

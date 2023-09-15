@@ -2,8 +2,11 @@ import React from 'react'
 import {
   Grid, GridItem
 } from '@chakra-ui/react'
-import Body from '../pages/Body'
+import DormitoryEquipmentRegistration from '../pages/DormitoryEquipment/DormitoryEquipmentRegistration'
 import Header from '../pages/Header'
+import DormitoryEquipmentEditing from '../pages/DormitoryEquipment/DormitoryEquipmentEditing'
+import DormitoryEquipmentDetails from '../pages/DormitoryEquipment/DormitoryEquipmentDetails/DormitoryEquipmentDetails'
+import DormitoryEquipment from '../pages/DormitoryEquipment/DormitoryEquipment'
 
 function Main() {
   return (
@@ -14,17 +17,20 @@ function Main() {
       h='900px'
       w='1440px'
       gap='0'
-      mx="12"
+      // mx="12"
     >
-      <GridItem colSpan={2} bg='orange.300' area={'header'}>
+      <GridItem colSpan={2} area={'header'}>
         <Header />
       </GridItem>
-      <GridItem rowSpan={2} bg='pink.300' area={'nav'}>
+      <GridItem rowSpan={2} bg='#F5F5F7' area={'nav'}>
         {/* fix position */}
-        Nav
+        {/* Navigation */}
       </GridItem>
       <GridItem rowSpan={2} area={'main'}>
-        <Body />
+        {/* <DormitoryEquipmentRegistration /> */}
+        {/* <DormitoryEquipmentEditing /> */}
+        {/* <DormitoryEquipmentDetails /> */}
+        <DormitoryEquipment />
       </GridItem>
     </Grid>
   )
