@@ -1,0 +1,234 @@
+.emp-address {
+    width: 1032px;
+    height: 663px;
+    top: 91px;
+    left: 84px;
+    position: absolute;
+    border-radius: 0px 7px 7px 0px;
+        border: 1px solid #eee;
+
+    &-title {
+        font-family: Noto Serif JP;
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 32px;
+        letter-spacing: 0.006em;
+        text-align: center;
+        width: 167px;
+        top: -50px;
+        position: absolute;
+    }
+
+    &-label {
+        border-radius: 7px 0px 0px 7px;
+        width: 330px;
+        height: 663px;
+        top: 0px;
+        left: 0px;
+        position: absolute;
+        &-1 {
+            width: 330px;
+            height: 43px;
+            top: 33px;
+            position: absolute;
+        }
+        &-2 {
+            width: 330px;
+            height: 43px;
+            top: 116px;
+            position: absolute;
+        }
+        &-3 {
+            width: 330px;
+            height: 43px;
+            top: 200px;
+            position: absolute;
+        }
+        &-4 {
+            width: 330px;
+            height: 43px;
+            top: 282px;
+            position: absolute;
+        }
+        &-5 {
+            width: 330px;
+            height: 43px;
+            top: 365px;
+            position: absolute;
+        }
+        &-6 {
+            width: 330px;
+            height: 43px;
+            top: 447px;
+            position: absolute;
+        }
+        &-7 {
+            width: 330px;
+            height: 43px;
+            top: 530px;
+            position: absolute;
+        }
+        &-8 {
+            width: 330px;
+            height: 43px;
+            top: 612px;
+            position: absolute;
+        }
+
+        &-name {
+            color: #000;
+            text-align: center;
+            font-family: "Noto Serif JP";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 28px;
+            letter-spacing: 0.096px;
+        }
+
+        &-require {
+            left: 154px;
+            top: -2px;
+            position: absolute;
+            color: #fff;
+            background: rgba(172, 166, 166, 0.6);
+            text-align: center;
+            font-family: "Noto Serif JP";
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            width: 37px;
+            height: 22px;
+        }
+    }
+
+    &-data {
+        border-radius: 0px 7px 7px 0px;
+        border: 1px solid #eee;
+        width: 702px;
+        height: 663px;
+        padding: 19px 159px 31px 19px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 37px;
+        left: 330px;
+        top: 0px;
+        position: absolute;
+    }
+    &-select {
+        width: 524px;
+        height: 43px;
+        border-radius: 7px;
+        border: 1px;
+        font-family: Noto Serif JP;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 28px;
+        letter-spacing: 0.016em;
+        text-align: left;
+        top: 40px;
+        position: relative;
+    }
+    select option {
+        width: 100px !important;
+    }
+
+    &-name {
+        width: 524px;
+        height: 43px;
+        top: 90px;
+        padding: 3px 0px 0px 21px;
+        border-radius: 7px;
+        border: 1px;
+    }
+    &-start-date {
+        font-family: Noto Serif JP;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 28px;
+        letter-spacing: 0.006em;
+        width: 52px;
+        height: 40px;
+        top: 130px;
+        position: relative;
+        
+    }
+    &-start-date-box {
+        width: 175px;
+        height: 43px;
+        top: 64px;
+        left: 91px;
+        padding: 0px 0px 0px 21px;
+        border-radius: 7px;
+        border: 1px;
+        position: relative;
+        border: 1px solid #cacaca;
+        border-radius: 4px;
+    }
+
+    .start-date-picker {
+        width: 148px;
+        padding: 7px 0;
+        font-family: Noto Serif JP;
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: 0.016em;
+        text-align: left;
+    }
+
+    &-end-date {
+        width: 52px;
+        height: 40px;
+        top: 32px;
+        left: 298px;
+        position: relative;
+    }
+
+    &-end-date-box {
+        width: 175px;
+        height: 43px;
+        top: -34px;
+        left: 368px;
+        padding: 0px 0px 0px 21px;
+        position: relative;
+        border: 1px solid #cacaca;
+        border-radius: 4px;
+    }
+
+    .end-date-picker {
+        width: 148px;
+        padding: 7px 0;
+        font-family: Noto Serif JP;
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: 0.016em;
+        text-align: left;
+    }
+
+    &-expense {
+        width: 175px !important;
+        height: 43px;
+        top: 3px;
+        border-radius: 7px;
+        border: 1px;
+    }
+
+    &-capacity {
+        width: 66px !important;
+        height: 43px;
+        top: 86px;
+        left: -176px;
+        padding: 7px 13px 7px 9px;
+        border-radius: 7px;
+        border: 1px;
+    }
+    &-status {
+        width: 154px;
+        height: 43px;
+        top: 134px;
+        left: 4px;
+        position: relative;
+    }
+}

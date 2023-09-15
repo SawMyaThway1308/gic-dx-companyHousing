@@ -9,6 +9,7 @@ import {
 // import Footer from '../pages/Footer'
 // import NavBar from '../pages/NavBar'
 import Header from '../pages/Header'
+import Body from '../pages/Body'
 
 function Main() {
   const [isNavCollapsed, setIsNavCollapsed] = React.useState(false)
@@ -26,9 +27,15 @@ function Main() {
         {/* <Header /> */}
         {/* <Navigation isNavCollapsed={isNavCollapsed} setIsNavCollapsed={setIsNavCollapsed} /> */}
       </GridItem>
+      <GridItem rowSpan={2} bg='red.300' area={'nav'} height="900px">
+      {/* fix position */}
+      Nav
+      </GridItem>
+      <GridItem rowSpan={2} area={'main'} bg='#FFFFFF'>
+     <Body/>
+      </GridItem>
       <GridItem area="main" className="main">
-        <Flex direction="column">
-            
+        <Flex direction="column"> 
           {/* <Body isNavCollapsed={isNavCollapsed} /> */}
           <Spacer />
           <Header />
