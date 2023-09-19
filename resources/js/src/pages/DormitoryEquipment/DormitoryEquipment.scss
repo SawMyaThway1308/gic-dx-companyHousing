@@ -8,10 +8,9 @@ $color: #000000;
     font-weight: $font-weight;
     letter-spacing:$letter-spacing;
     line-height: $line-height;
-    text-align: center;
 }
 
-@mixin register-align($height: 67px, $left: 84px, $top: 12px, $width: 1032px) {
+@mixin register-align($height: 58px, $left: 84px, $top: 12px, $width: 1032px) {
     height: $height;
     left: $left;
     position: absolute;
@@ -24,6 +23,7 @@ $color: #000000;
     @include register-title-style($color: #FFF, $font-size: 16px, $font-weight: 400, $line-height: normal, $letter-spacing: 0.006em);
     background: #367DA5;
     border-radius: 6px;
+    text-align: center;
 }
 
 .equipment-list {
@@ -37,51 +37,29 @@ $color: #000000;
         border-radius: 4px;
         background: #FFF;
         box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+        text-align: center;
 
         &-list {
-            width: 89px;
-            height: 32px;
-            top: 16px;
-            left: 28px;
-            position: absolute;
-            color: #000;
+            @include register-align($height: 32px, $left: 28px, $top: 16px, $width: 89px);
+            @include register-title-style($font-size: 20px, $font-weight: 600, $letter-spacing: 0.132px);
             text-align: center;
-            font-family: 'Noto Serif JP';
-            font-size: 22px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: normal;
-            letter-spacing: 0.132px;
         }
 
         &-new {
-            width: 89px;
-            height: 32px;
-            left: 180px;
-            top: 16px;
-            position: absolute;
-            color: #000;
+            @include register-align($height: 32px, $left: 180px, $top: 16px, $width: 89px);
+            @include register-title-style($font-size: 20px, $font-weight: 600, $letter-spacing: 0.132px);
             text-align: center;
-            font-family: 'Noto Serif JP';
-            font-size: 22px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: normal;
-            letter-spacing: 0.132px;
+
         }
 
         &-scroll {
+            @include register-align($height: 3px, $left: 0px, $top: 58px, $width: 150px);
             background: #367DA5;
-            width: 150px;
-            height: 3px;
-            top: 67px;
-            left: 0px;
-            position: absolute;
         }
     }
 
     &-data {
-        @include register-align($height: 656px, $left: 84px, $top: 107px, $width: 1032px);
+        @include register-align($height: auto, $left: 84px, $top: 88px, $width: 1032px);
 
         &-action {
             top: 3px;
@@ -200,47 +178,113 @@ $color: #000000;
                     }
                 }
             }
+
+            .csv-input:hover,
+            .csv-output:hover,
+            .search-group-action:hover {
+                background: #367DA5;
+            }
         }
 
         &-table {
-            @include register-align($height: 553px, $left: 0px, $top: 71px, $width: 1032px);
+            @include register-align($height: 597px, $left: 0px, $top: 62px, $width: 1032px);
+            .data-table {
+                &-header {
+                    @include register-align($height: auto, $left: 0px, $top: 0px, $width: 1032px);
+                    background: #EEE;
+                    & th {
+                        @include register-title-style($font-size: 18px, $font-weight: 600, $letter-spacing: 0.132px);
+                        text-align: center;
+                    }
+                    &-check {
+                        background-color: #FFF;
+                        border-radius: 3px;
+                        border: 0px solid white;
+                        left: 15px;
+                        top: 6px;
+                    }
+                }
 
-            .data-table-header {
-                @include register-align($height: 52px, $left: 0px, $top: 0px, $width: 1032px);
-                background: #EEE;
-                padding: 10px;
+                &-body {
+                    @include register-align($height: 40.4px, $left: 0px, $top: 52px, $width: 1032px);
+                    & td {
+                        @include register-title-style($font-size: 16px, $font-weight: 400, $letter-spacing: 0px);
+                        padding-top: 15px;
+                        padding-bottom: 15px;
+                    }
+                    &-check {
+                        background-color: #FFF;
+                        border-radius: 0px;
+                        border: 0px solid #EEE;
+                        left: 15px;
+                        top: 1px;
+                    }
+                }
             }
-            .table {
-                &-number {
-                    // left: 0px;
-                    // display: flex;
-                    width: 63px;
-                    height: 52px;
-                    padding: 10px;
+        }
+
+        &-pagination {
+            @include register-align($height: auto, $left: 0px, $top: 680px, $width: auto);
+            @include register-title-style($color: #7B7B7B, $font-size: 14px, $font-weight: 400, $letter-spacing: 0px);
+            &-action {
+                @include register-align($height: 24px, $left: 750px, $top: 0px, $width: 135px);
+
+                &-1 {
+                    left: 887px;
                     position: absolute;
-                    // color: #000;
-                    // font-family: 'Noto Serif JP';
-                    // font-size: 20px;
-                    // font-style: normal;
-                    // font-weight: 400;
-                    // line-height: normal;
                 }
 
-                &-check {
-                    // display: flex;
-                    // width: 50.079px;
-                    // height: 52px;
-                    // left: 63px;
-                    // top: 0px;
-                    // position: absolute;
-                    // padding: 15px;
-                    // align-items: center;
-                    width: 18px;
-                    height: 20px;
-                // background: #FFF;
+                &-2 {
+                    left: 843px;
+                    position: absolute;
                 }
+
+                &-3 {
+                    left: 797px;
+                    position: absolute;
+                }
+
+                .paginate {
+                    &-left {
+                        background-color: #FFF;
+                        border-radius: 100%;
+                    }
+
+                    &-right {
+                        background-color: #FFF;
+                        border-radius: 100%;
+                    }
+
+                    &-page {
+                        &-active {
+                            width: 7px;
+                            height: 28px;
+                            border-radius: 8px;
+                            background: #EEE;
+                        }
+
+                        &-nonactive {
+                            width: 7px;
+                            height: 28px;
+                            border-radius: 8px;
+                            background: #FFF;
+                        }
+                        text-align: center;
+                        @include register-title-style($font-size: 20px, $font-weight: 500, $line-height: 32px, $letter-spacing: 0.006em);
+                    }
+                }
+            }
+
+            .paginate-page-nonactive:hover,
+            .paginate-page-active:hover{
+                background: #EEE;
+            }
+
+            .paginate-left:hover,
+            .paginate-right:hover {
+                background-color: #EEE !important;
+                border-radius: 100%;
             }
         }
     }
 }
-

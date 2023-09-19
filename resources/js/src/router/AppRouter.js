@@ -10,12 +10,15 @@ import Main from "../main";
 import DormitoryEquipmentRegistration from "../pages/DormitoryEquipment/DormitoryEquipmentRegistration";
 import DormitoryEquipmentEditing from "../pages/DormitoryEquipment/DormitoryEquipmentEditing";
 import DormitoryEquipmentDetails from "../pages/DormitoryEquipment/DormitoryEquipmentDetails/DormitoryEquipmentDetails";
+import DormitoryEquipment from "../pages/DormitoryEquipment/DormitoryEquipment";
 
 function AppRouter() {
     return (
         <Router>
           <Routes>
             <Route path="/" element={<Main />}>
+            <Route path="/equipment-details" element={<DormitoryEquipmentDetails />} />
+            <Route path="/equipment-list" element={<DormitoryEquipment />} />
             </Route>
             <Route path="/equipment-registration" element={<DormitoryEquipmentRegistration />} />
             <Route path="/equipment-edition" element={<DormitoryEquipmentEditing />} />

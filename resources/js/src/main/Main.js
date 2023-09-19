@@ -14,7 +14,7 @@ function Main() {
       templateAreas={`"header header""nav main"`}
       gridTemplateRows={'64px 1fr 0px'}
       gridTemplateColumns={'240px 1fr'}
-      h='900px'
+      // h='900px'
       w='1440px'
       gap='0'
       // mx="12"
