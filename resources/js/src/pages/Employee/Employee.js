@@ -10,7 +10,6 @@ function Employee() {
     const fetchDataFromBackend = async () => {
         try {
             const response = await axios.get(`${RenewalAxiosClient.baseURL}${ACTION.ALL}`);
-            console.log(response.data);
         } catch (error) {
             console.error('Error:', error);
         }
