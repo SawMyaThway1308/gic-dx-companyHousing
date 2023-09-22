@@ -1,0 +1,382 @@
+$color: #000000;
+
+@mixin detail-equipment-title-style($color: $color, $font-size: 22px, $font-weight: 400, $line-height: normal, $letter-spacing: 0.132px) {
+    color: $color;
+    font-family: 'Noto Serif JP';
+    font-size: $font-size;
+    font-style: normal;
+    font-weight: $font-weight;
+    letter-spacing:$letter-spacing;
+    line-height: $line-height;
+    text-align: center;
+}
+
+@mixin detail-equipment-align($height: 185px, $left: 84px, $top: 23px, $width: 243px) {
+    height: $height;
+    left: $left;
+    position: absolute;
+    top: $top;
+    width: $width;
+}
+
+.equipment-detail {
+    background: #FFF;
+    position: absolute;
+    z-index: 0;
+
+    .detail {
+        &-header {
+            @include detail-equipment-align();
+
+            &-back-icon {
+                @include detail-equipment-align($height: 13.5px, $left: 4px, $top: 34px, $width: 18px);
+            }
+            &-back {
+                @include detail-equipment-align($height: 27px, $left: 25px, $top: 27px, $width: 114px);
+                @include detail-equipment-title-style($color: #000, $font-size: 18px, $font-weight: 500, $line-height: 32px, $letter-spacing: 0.108px);
+            }
+            &-title {
+                @include detail-equipment-align($height: 65px, $left: 0px, $top: 57px, $width: 167px);
+                @include detail-equipment-title-style($font-weight: 700, $line-height: 32px, $letter-spacing: 0.006em);
+            }
+        }
+
+        &-action {
+            @include detail-equipment-align($height: 85px, $left: 960px, $top: 50px, $width: 156px);
+
+            &-delete {
+                &-icon {
+                    @include detail-equipment-align($height: 20px, $left: 36px, $top: 21px, $width: 20px);
+                }
+
+                &-title {
+                    @include detail-equipment-align($height: 30px, $left: 19px, $top: 41px, $width: 49px);
+                    @include detail-equipment-title-style($font-size: 14px, $font-weight: 400, $line-height: 23px, $letter-spacing: 0.084px);
+                }
+            }
+
+            &-edit {
+                &-icon {
+                    @include detail-equipment-align($height: 20px, $left: 103px, $top: 21px, $width: 20px);
+                }
+
+                &-title {
+                    @include detail-equipment-align($height: 30px, $left: 88px, $top: 41px, $width: 49px);
+                    @include detail-equipment-title-style($font-size: 14px, $font-weight: 400, $line-height: 23px, $letter-spacing: 0.084px);
+                }
+            }
+        }
+    }
+
+    .dormitory-supply {
+        width: 1032px;
+        height: 663px;
+        top: 139px;
+        left: 84px;
+        position: absolute;
+
+        &-label {
+            border-radius: 7px 0px 0px 7px;
+            background: #eee;
+            width: 330px;
+            height: 663px;
+            top: 0px;
+            left: 0px;
+            position: absolute;
+
+            &-divider {
+                border-color: #ffffff !important;
+                height: 1px;
+                position: absolute;
+                stroke-width: 1px;
+                top: 46px;
+                width: 1032px !important;
+            }
+    
+            &-1 {
+                width: 330px;
+                height: 43px;
+                top: 30px;
+                position: absolute;
+            }
+            &-2 {
+                width: 330px;
+                height: 43px;
+                top: 109px;
+                position: absolute;
+            }
+            &-3 {
+                width: 330px;
+                height: 43px;
+                top: 189px;
+                position: absolute;
+            }
+            &-4 {
+                width: 330px;
+                height: 43px;
+                top: 269px;
+                position: absolute;
+            }
+            &-5 {
+                width: 330px;
+                height: 43px;
+                top: 351px;
+                position: absolute;
+            }
+            &-6 {
+                width: 330px;
+                height: 43px;
+                top: 431px;
+                position: absolute;
+            }
+            &-7 {
+                width: 330px;
+                height: 43px;
+                top: 511px;
+                position: absolute;
+            }
+            &-8 {
+                width: 330px;
+                height: 43px;
+                top: 587px;
+                position: absolute;
+            }
+    
+            &-name {
+                top: 8px;
+                position: absolute;
+                color: #000;
+                text-align: center;
+                font-family: "Noto Serif JP";
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 28px;
+                letter-spacing: 0.096px;
+                &-2 {
+                    width: 35px;
+                    height: 40px;
+                    left: 47px;
+                    position: absolute;
+                }
+                &-3 {
+                    width: 52px;
+                    height: 40px;
+                    left: 47px;
+                    position: absolute;
+                }
+                &-4 {
+                    width: 67px;
+                    height: 40px;
+                    left: 47px;
+                    position: absolute;
+                }
+                &-5 {
+                    width: 88px;
+                    height: 40px;
+                    left: 47px;
+                    position: absolute;
+                }
+            }
+    
+            &-require {
+                left: 154px;
+                top: 12px;
+                position: absolute;
+                color: #fff;
+                background: rgba(172, 166, 166, 0.6);
+                text-align: center;
+                font-family: "Noto Serif JP";
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                width: 37px;
+                height: 22px;
+    
+                &-name {
+                    top: 2px;
+                    left: 0px;
+                    width: 37px;
+                    height: 22px;
+                    position: absolute;
+                }
+            }
+        }
+
+        &-data {
+            border-radius: 0px 7px 7px 0px;
+            border: 1px solid #eee;
+            width: 702px;
+            height: 663px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            left: 330px;
+            position: absolute;
+
+            .equipment {
+                &-type {
+                    border-radius: 7px;
+                    width: 524px;
+                    top: 31px;
+                    left: 19px;
+                    position: absolute;
+                    & select {
+                        height: 43px;
+                    }
+                }
+                &-code {
+                    border-radius: 7px;
+                    width: 64px;
+                    top: 111px;
+                    left: 19px;
+                    position: absolute;
+                    & input {
+                        height: 43px;
+                    }
+                }
+                &-name {
+                    border-radius: 7px;
+                    width: 524px;
+                    top: 190px;
+                    left: 19px;
+                    position: absolute;
+
+                    & input {
+                        height: 43px;
+                    }
+                }
+                &-purchase {
+                    width: 243px;
+                    height: 43px;
+                    top: 271px;
+                    left: 19px;
+                    border-radius: 0px;
+                    position: absolute;
+                    &-value {
+                        height: 43px;
+                        width: 243px;
+                        position: absolute;
+                        border-radius: 5px;
+
+                        & input {
+                            height: 43px;
+                        }
+                    }
+
+                    &-year {
+                        background: #d9d9d9;
+                        width: 44px;
+                        height: 43px;
+                        top: 0px;
+                        left: 199px;
+                        border-radius: 0 7px 7px 0px;
+                        position: absolute;
+
+                        .name {
+                            color: #000;
+                            width: 44px;
+                            height: 43px;
+                            padding: 10px 0px;
+                            position: absolute;
+                            text-align: center;
+                            font-family: "Noto Serif JP";
+                            font-size: 16px;
+                            font-style: normal;
+                            font-weight: 500;
+                            line-height: 28px;
+                            letter-spacing: 0.096px;
+                        }
+                    }
+                }
+    
+                &-maker {
+                    border-radius: 7px;
+                    width: 524px;
+                    top: 350px;
+                    left: 19px;
+                    position: absolute;
+                    & input {
+                        height: 43px;
+                    }
+                }
+                &-model {
+                    border-radius: 7px;
+                    width: 524px;
+                    top: 431px;
+                    left: 19px;
+                    position: absolute;
+                    & input {
+                        height: 43px;
+                    }
+                }
+                &-status {
+                    width: 154px;
+                    height: 43px;
+                    top: 510px;
+                    left: 19px;
+                    position: absolute;
+                    &-enable {
+                        &-name {
+                            width: 41px;
+                            height: 23px;
+                            color: #000;
+                            text-align: center;
+                            font-family: "Noto Serif JP";
+                            font-size: 16px;
+                            font-style: normal;
+                            font-weight: 500;
+                            line-height: 28px;
+                            letter-spacing: 0.096px;
+                        }
+                        &-value {
+                            width: 20px;
+                            height: 20px;
+                            top: 22px;
+                            left: 10px;
+                            position: absolute;
+                            flex-shrink: 0;
+                            background-color: #d9d9d9;
+                            border: none;
+                        }
+                    }
+                    &-disable {
+                        &-name {
+                            width: 41px;
+                            height: 23px;
+                            color: #000;
+                            text-align: center;
+                            font-family: "Noto Serif JP";
+                            font-size: 16px;
+                            font-style: normal;
+                            font-weight: 500;
+                            line-height: 28px;
+                            letter-spacing: 0.096px;
+                        }
+                        &-value {
+                            width: 20px;
+                            height: 20px;
+                            top: 22px;
+                            left: 92px;
+                            position: absolute;
+                            flex-shrink: 0;
+                            background-color: #d9d9d9;
+                            border: none;
+                        }
+                    }
+                }
+                &-address {
+                    border-radius: 7px;
+                    width: 524px;
+                    top: 589px;
+                    left: 19px;
+                    position: absolute;
+                    & select {
+                        height: 43px;
+                    }
+                }
+            }
+        }
+    }
+}

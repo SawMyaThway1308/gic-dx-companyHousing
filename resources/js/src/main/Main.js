@@ -1,38 +1,36 @@
 import React from 'react'
 import {
-  Flex, Grid, GridItem, Spacer
+  Grid, GridItem
 } from '@chakra-ui/react'
-// import Body from './Body'
-// import Footer from './Footer'
-// import Navigation from './Navigation'
-// import './Main.scss'
-// import Footer from '../pages/Footer'
-// import NavBar from '../pages/NavBar'
+import DormitoryEquipmentRegistration from '../pages/DormitoryEquipment/DormitoryEquipmentRegistration'
 import Header from '../pages/Header'
+import DormitoryEquipmentEditing from '../pages/DormitoryEquipment/DormitoryEquipmentEditing'
+import DormitoryEquipmentDetails from '../pages/DormitoryEquipment/DormitoryEquipmentDetails/DormitoryEquipmentDetails'
+import DormitoryEquipment from '../pages/DormitoryEquipment/DormitoryEquipment'
 
 function Main() {
-  const [isNavCollapsed, setIsNavCollapsed] = React.useState(false)
-
   return (
     <Grid
-      height="fit-content"
-      templateAreas={`"nav main"
-                  "nav main"`}
-      gridTemplateRows="28px 1fr"
-      gridTemplateColumns={isNavCollapsed ? '50px 1fr' : '208px 1fr'}
+      templateAreas={`"header header""nav main"`}
+      gridTemplateRows={'64px 1fr 0px'}
+      gridTemplateColumns={'240px 1fr'}
+      // h='900px'
+      w='1440px'
+      gap='0'
+      // mx="12"
     >
-      <GridItem area="nav">
-        {/* <NavBar /> */}
-        {/* <Header /> */}
-        {/* <Navigation isNavCollapsed={isNavCollapsed} setIsNavCollapsed={setIsNavCollapsed} /> */}
+      <GridItem colSpan={2} area={'header'}>
+        <Header />
       </GridItem>
-      <GridItem area="main" className="main">
-        <Flex direction="column">
-            
-          {/* <Body isNavCollapsed={isNavCollapsed} /> */}
-          <Spacer />
-          <Header />
-        </Flex>
+      <GridItem rowSpan={2} bg='#F5F5F7' area={'nav'}>
+        {/* fix position */}
+        {/* Navigation */}
+      </GridItem>
+      <GridItem rowSpan={2} area={'main'}>
+        {/* <DormitoryEquipmentRegistration /> */}
+        {/* <DormitoryEquipmentEditing /> */}
+        {/* <DormitoryEquipmentDetails /> */}
+        <DormitoryEquipment />
       </GridItem>
     </Grid>
   )
